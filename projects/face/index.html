@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" href="../../resume.css">
+    <link rel="stylesheet" href="../../projects.css">
+    <style>
+        body {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .container {
+            width: 100%;
+            margin-top: 32px;
+            text-align: justify;
+        }
+
+        .container p {
+            padding-top: 12px;
+        }
+
+        .container span {
+            font-size: 12pt;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Facial Identification System Using Siamese Networks</h1>
+        <p><span>The Siamese Network has proven to be a simple and effective implementation of One-Shot Learning for
+                Facial Recognition and Verification. For facial recognition we are given only a single image from which
+                the person must be recognized. The Siamese Network compares the image feeded with those in the database
+                by computing the distance between the encoding vectors of the images. If the distance is below a certain
+                threshold, which can be treated as a hyperparameter, the faces are a match else not a match.
+            </span></p>
+        <div style="padding:24px; text-align:center;">
+            <img src="siamese.png"><br />
+            <span style="font-size:10px;">credit: Andrew Ng</span>
+        </div>
+
+        <p><span>The benefits of using the Siamese network is that we no longer need to retrain the network everytime a
+                new image is added to the database nor do we need a large dataset to train the network, which can be
+                hard to obtain under these circumstances.<br />
+                The Siamese Network is trained using a triplet loss function which uses 3 images, an anchor image, a
+                positive image(same person as anchor) and a negative image(different person than anchor). If the
+                distance between encodings of the anchor and postive image is d(A,P) and simlarly between anchor and
+                negative image is d(A,N), the triplet loss function is given by:
+            </span>
+        </p>
+        <div style="padding:0px 24px; text-align:center;">
+            <img src="triplet.png">
+        </div>
+    </div>
+
+</body>
+
+</html>

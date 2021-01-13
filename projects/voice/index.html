@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" href="../../resume.css">
+    <link rel="stylesheet" href="../../projects.css">
+    <style>
+        body {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .container {
+            width: 100%;
+            margin-top: 32px;
+            text-align: justify;
+        }
+
+        .container p {
+            padding-top: 12px;
+        }
+
+        .container span {
+            font-size: 12pt;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Voice Digitizer</h1>
+        <p>
+            <span>
+                Designed a voice digitizer using an 8086 microprocessor chip and peripheral devices. The system takes in
+                an audio/voice signal ranging from 0-5V from a microphone. This output is fed into an 8-bit A2D
+                converter sampled at 1000Hz. After the audio sequence has been digitized, it is stored in RAM. The
+                stored audio signal can then be reproduced with a custom delay which entered using a keypad with values
+                ranging from 0-9. A seven-segment display is used to display this value. The stored audio is passed
+                through an 8-bit D2A converter and can be reproduced using a audio output device such as a speaker.
+                <br /><br />We designed a simulation of this using Proteas and used emu8086 to write the Assembly Level
+                Code to run the simulation.
+            </span>
+        </p>
+        <div style="padding:24px; text-align:center;">
+            <img src="screenshot.png" width="60%"><br />
+        </div>
+        <div>
+            Some of the key components used for designing the circuit are:
+            <div style="padding-left: 20px; padding-bottom:20px"><span>
+                    - 8086 Microprocessor<br />
+                    - 8255 Programmable Peripheral Interface<br />
+                    - 8259 Programmable Interrupt Controller<br />
+                    - 8254 Programmable Interval Timer<br />
+                    - 8284 Clock Generator<br />
+                    - 6116 2K RAM<br />
+                    - 2716 2K ROM<br />
+                    - ADC0808 Analog to Digital Converter<br />
+                    - DAC0808 Digital to Analog Converter<br />
+                    - 74244 Octal Buffers<br />
+                </span></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

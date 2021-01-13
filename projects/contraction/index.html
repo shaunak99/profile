@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" href="../../resume.css">
+    <link rel="stylesheet" href="../../projects.css">
+    <style>
+        body {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .container {
+            width: 100%;
+            margin-top: 32px;
+            text-align: justify;
+        }
+
+        .container p {
+            padding-top: 12px;
+        }
+
+        .container span {
+            font-size: 12pt;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Road Network Traversals Using Contraction Hierarchies</h1>
+        <p>
+            <span>
+                Road Networks are highly dense networks when arranged in graphs as nodes and edges, and can lead to very
+                high computations when finding the shortest path between 2 nodes using standard algorithms like
+                Djikstra's. Contraction Hierarchies are built on the idea that to travel between destinations, we first
+                move from streets to highways and bigger highways and then move back down again. This proves to be
+                thousands of times faster than Djikstra and therefore more effective in real-time applications.
+            </span>
+        </p>
+        <div style="padding:24px; text-align:center;">
+            <img src="map.png" width="50%"><br />
+            <span style="font-size:10pt">credit: https://www.mjt.me.uk/posts/contraction-hierarchies/</span>
+        </div>
+        <p><span>
+                Contraction Hierarchies use augmented graphs to compute the shortest paths. This consists of adding
+                shortcuts by contracting less important nodes and spreading important nodes across the graph, while
+                minimizing the number of edges. The node ordering plays a crucial role in preprocessing and query time.
+                To obtain an optimal node ordering, a measure of importance is added to each node using hueristics and
+                its order is maintained in a priority queue.
+                <br /><br />The importance criteria are governed by:</span><br />
+            <div style="padding-left:12px;"><span> - Edge Difference [ed(v)] = Added Shortcuts - Incoming Degree -
+                    Outgoing Degree
+                    <br /> - Number of Contracted Neighbours [cn(v)]
+                    <br /> - Shortest Cover [sc(v)] = number of neighbours w of v that we have to shortcut to or from w
+                    after contracting v
+            </div><span>
+                <br />Node Level [L(v)] = Upper bound on the edges in the shortest path from any node s to v in the
+                augmented graph
+                <br />Importance I(v) = a*ed(v) + b*cn(v) + c*sc(v) + d*L(v)
+                <br /><br />By adjusting the weights of the above parameters, we can find the effect on preprocessing
+                and query time to find the shortest path.
+            </span>
+        </p>
+        <div style="padding:24px; text-align:center;">
+            <img src="graph.png"><br />
+            <span
+                style="font-size:10pt">credit:https://www.semanticscholar.org/paper/Exact-Routing-in-Large-Road-Networks-Using-Geisberger-Sanders/1109ce6dab08d16b56129512bb8f5329b98596b8/figure/0</span>
+        </div>
+    </div>
+
+</body>
+
+</html>

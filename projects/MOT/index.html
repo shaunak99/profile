@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" href="../../resume.css">
+    <link rel="stylesheet" href="../../projects.css">
+    <style>
+        body {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .container {
+            width: 100%;
+            margin-top: 32px;
+            text-align: justify;
+        }
+
+        .container p {
+            padding-top: 12px;
+        }
+
+        .container span {
+            font-size: 12pt;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Multi-Object tracking</h1>
+        <p><span>ShallowSORT is an online realtime approach to multiple-object tracking. Inspired by the SORT and
+                DeepSORT algorithms, ShallowSORT uses colour histograms as feature desciptors to associate and track
+                objects. The algorithm takes the feature extraction process online and also acheives speeds of nearly 70
+                FPS running on a single core CPU. ShallowSORT has been tested on the MOTChallenge benchmark
+                <a href="https://motchallenge.net/method/MOT=3356&chl=5">https://motchallenge.net/method/MOT=3356&chl=5</a> and has also been evaluated on the training KITTI
+                dataset.
+            </span></p>
+        <div style="padding:24px; text-align:center;">
+            <img src="MOT.jpg"><br />
+        </div>
+
+        <p><span>ShallowSORT uses HSV based colour histrograms as feature descriptors as compared to DeepSORT which uses
+                CNN based feature descriptors. CNNs are computationally expensive and the feature extraction process
+                must be either done offline or on GPUs, along with the added process of training the network against a specific set of
+                clasess. By using colour histograms, we make our method class agnostic while also enabling the feature
+                extraction process to be conducted online while maintaining computational efficiency.
+            </span>
+        </p>
+        <div style="padding:24px; text-align:center;">
+            <img src="KITTI.jpg">
+        </div>
+    </div>
+
+</body>
+
+</html>

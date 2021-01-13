@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" href="../../resume.css">
+    <link rel="stylesheet" href="../../projects.css">
+    <style>
+        body {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .container {
+            width: 100%;
+            margin-top: 32px;
+            text-align: justify;
+        }
+
+        .container p {
+            padding-top: 12px;
+        }
+
+        .container span {
+            font-size: 12pt;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Localization And Path Planning For Autonomous Vehicles</h1>
+        <p>
+            <span>
+                Using the ROS framework, we had created a basic prototype for simulating autonomous navigation. We used
+                Gazebo to simulate our robot and performed Mapping, Localization and Path planning.<br /><br />
+                <b>Gmapping</b><br />
+                We first created a map of the environment using gmapping. We map the surrounding obstacles by using
+                laser data from the depth sensor mounted on the robot.<br /><br />
+                <b>Localization</b><br />
+                Once we created the map, we used the robot_localization Package in ROS to perform state estimation. We
+                fused sensor data, such as wheel encoders and IMU, to produce a local pose estimate, and similarly
+                combined AMCL (Adaptive Monte Carlo Localalization) and gmapping to obtain a global pose estimate. The
+                state estimates are combined using the ekf_localization node, which is an implementation of the Extended
+                Kalman Filter.
+            </span>
+        </p>
+        <div style="padding:24px; text-align:center;">
+            <img src="ekf.jpeg"><br />
+            <span style="font-size:10pt">credit:
+                https://automaticaddison.com/how-to-launch-the-turtlebot3-simulation-with-ros/</span>
+        </div>
+        <p><span><b>Path Planning - Move Base</b><br />
+                To perform path planning, we used move_base from the navigation stack in ROS, which takes the transform
+                (tf) and odometry (odom) data from the the ekf_localization_nodes as inputs and performs local and
+                global path planning.
+            </span>
+        </p>
+        <div style="padding:24px; text-align:center;">
+            <img src="pipeline.jpg"><br />
+            <span style="font-size:10pt">credit:https://roscon.ros.org/2015/presentations/robot_localization.pdf</span>
+        </div>
+    </div>
+
+</body>
+
+</html>

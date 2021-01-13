@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" href="../../resume.css">
+    <link rel="stylesheet" href="../../projects.css">
+    <style>
+        body {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .container {
+            width: 100%;
+            margin-top: 32px;
+            text-align: justify;
+        }
+
+        .container p {
+            padding-top: 12px;
+        }
+
+        .container span {
+            font-size: 12pt;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Object Detection & Blurring Using Haar Cascades For Privacy Protection</h1>
+        <p><span>OpenCV provides a wide set of libraries for various computer vision and image processing related tasks.
+                Using
+                OpenCV's APIs, a simple tool for Privacy Protection was created that detects number plates in dash cam
+                footage and blurs them.</span><br /><br />
+
+            <span>To detect the number plate in the footage, we used Haar cascade classifiers. Edge and Line Haar
+                features were used to detect the Region of Interest. Having obtained this, we use a simple median
+                blur to mask the number plate details and thus protect the privacy of the individual.</span>
+        </p>
+
+        <div style="padding:24px 32px;">
+            <img src="plate_detect.jpg" style="width:49%; float:left; border-radius:4px;">
+            <img src="plate_blurred.jpg" style="width:49%; float:right; border-radius:4px;">
+        </div>
+    </div>
+
+</body>
+
+</html>
